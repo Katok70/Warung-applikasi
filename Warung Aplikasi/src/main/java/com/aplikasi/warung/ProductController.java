@@ -30,13 +30,23 @@ public class ProductController {
 	@RequestMapping(value="/produk")
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("produk");
-		//mv.addObject("product", this.pr.getAllProduct());
 		mv.addObject("products", this.pr.getAllpro());
 		return mv;
 	}
 	@RequestMapping(value = "/tentang")
 	public ModelAndView tentang() {
 		ModelAndView mv = new ModelAndView("tentang");
+		return mv;
+	}
+	@RequestMapping(value = "/detailproduk")
+	public ModelAndView detailproduk() {
+		ModelAndView mv = new ModelAndView("detailproduk");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/frameproduk")
+	public ModelAndView frameproduk() {
+		ModelAndView mv = new ModelAndView("frameproduk");
 		return mv;
 	}
 }
